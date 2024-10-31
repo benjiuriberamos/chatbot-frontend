@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { ChatButton } from './Components/ChatButton';
+import { ChatWindow } from './Components/ChatWindow';
+import { ChatCreateMessage } from './Components/ChatCreateMessage';
+import React from 'react';
 
 function App() {
+  const [activeChat, setActiveChat] = React.useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {activeChat &&
+        (<ChatWindow>
+          <div className="top_menu">
+            <div className="title">ChatBot - Platzi</div>
+          </div>
+            
+          <ChatCreateMessage/>
+        </ChatWindow>)
+      }
+      <ChatButton
+        setActiveChat={setActiveChat}
+      />
+    </>
   );
 }
 
