@@ -1,9 +1,10 @@
 .bottom_wrapper {
 	background-color: #fff;
-	padding: 20px;
+	padding: 10px;
 	bottom: 0;
 	display: flex;
     position: absolute;
+	width: 92%;
 }
 
 .bottom_wrapper #msg_input {

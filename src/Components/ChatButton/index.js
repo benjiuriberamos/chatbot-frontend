@@ -1,7 +1,9 @@
+import React from 'react';
 import './ChatButton.css';
 import { ReactComponent as ChatSVG } from './chat.svg';
 
 function ChatButton({ setActiveChat }) {
+    
     return (
         <button
             className='ChatButton'

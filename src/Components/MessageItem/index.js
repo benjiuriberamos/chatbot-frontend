@@ -3,7 +3,7 @@ import './MessageItem.css';
 
 function MessageItem({ message, date, type}) {
     return (
-        <li className={`message ${type}`}>
+        <li className={`message ${type} appeared`}>
             <div className="avatar"></div>
             <div className="text_wrapper">
                 <div className="text">{message}</div>
